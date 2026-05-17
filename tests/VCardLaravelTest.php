@@ -15,6 +15,7 @@ it('can generate a vcard using the facade', function () {
 it('can return a vcard response using the macro', function () {
     $vcard = VCard::make()->addName('Doe', 'Jane');
     
+    /** @phpstan-ignore staticMethod.notFound */
     $response = Response::vcard($vcard, 'jane.vcf');
     
     expect($response->headers->get('Content-Type'))->toBe('text/vcard');

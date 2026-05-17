@@ -80,7 +80,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Dunn\VCard\VCard addJsprop(string $key, string $jsonValue)
  *
  * Generic / Custom Properties
- * @method static \Dunn\VCard\VCard addProperty(string $name, string $value, array $params = [])
+ * @method static \Dunn\VCard\VCard addProperty(string $name, string $value, array<string, string> $params = [])
  *
  * Build
  * @method static string build()

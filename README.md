@@ -12,7 +12,7 @@ Fully compliant with the [IANA vCard Elements registry](https://www.iana.org/ass
 ## Installation
 
 ```bash
-composer require abduns/laravel-vcard
+composer require abduns/vcard-laravel
 ```
 
 The package auto-discovers itself via Laravel's package discovery. No manual registration needed.

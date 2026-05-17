@@ -1,5 +1,5 @@
 {
-    "name": "abduns/laravel-vcard",
+    "name": "abduns/vcard-laravel",
     "description": "Laravel bridge for the abduns/vcard generator.",
     "type": "library",
     "license": "MIT",

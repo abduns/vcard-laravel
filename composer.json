@@ -1,0 +1,78 @@
+{
+    "name": "abduns/laravel-vcard",
+    "description": "Laravel bridge for the abduns/vcard generator.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "vcard",
+        "laravel",
+        "vcf"
+    ],
+    "authors": [
+        {
+            "name": "Abduns",
+            "email": "abduns@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "abduns/vcard": "^1.0 || dev-main",
+        "illuminate/support": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dunn\\VCard\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dunn\\VCard\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dunn\\VCard\\Laravel\\Providers\\VCardServiceProvider"
+            ],
+            "aliases": {
+                "VCard": "Dunn\\VCard\\Laravel\\Facades\\VCard"
+            }
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "stan": "phpstan analyse --memory-limit=512M",
+        "fix": "php-cs-fixer fix",
+        "lint": "php-cs-fixer fix --dry-run --diff",
+        "ci": [
+            "@lint",
+            "@stan",
+            "@test"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../vcard",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
